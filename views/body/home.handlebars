@@ -1,0 +1,65 @@
+
+
+	<section id="blog" class="md-padding">
+		<div class="container">
+			<div class="row">
+         <main id="main" class="col-md-8">
+					<div class="blog">
+						
+						<div class="blog-content">
+                           
+							<table>
+
+
+                                  <thead>
+										  <tr>
+											  <th>Username</th>
+											  <th>email</th>
+											  <th>Sil</th>
+                                        	  <th>Güncelle</th>
+
+									      </tr>
+									 </thead>
+									 <tbody>
+										  {{#each users}}
+										 <tr>
+											 <td>{{username}}</td>
+											 <td>{{email}}</td>
+											  <td>
+                                                  <form action="/sil/{{_id}}?_method=DELETE" method="POST">
+                                                       <input type="hidden" name="_method" value="DELETE">
+								                       <button type="submit" clas="btn btn-danger">SİL</button>
+								                 </form>
+
+											  </td>
+											<td><a class="btn btn-warning" href="/update/{{_id}}">Güncelle</a></td>
+										</tr>
+										{{/each}}
+									 </tbody>
+                                      
+
+
+
+							</table>
+							
+
+                                    
+								
+							
+							
+						</div>
+
+
+						
+					
+					</div>
+			
+				
+				
+				
+			</div>
+
+		</div>
+	</section>
+
+	
